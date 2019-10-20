@@ -1,3 +1,5 @@
+; Found somewere on the Internet
+
 #include <AutoItConstants.au3>
 #include <MsgBoxConstants.au3>
 

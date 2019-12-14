@@ -6,9 +6,8 @@ languageConfig.url = "https://www.autoitscript.com";
 languageConfig.extensions = [".au3"];
 languageConfig.builders = {};
 languageConfig.compilers = {
-  php7: {
+  autoit3: {
     install: "scoop install autoit",
-    // Cpp does not have possibility to compile and run on the fly. We need to save it as a exe file first.
     command: "autoit",
     args: "<file>",
     help: ``
@@ -17,16 +16,15 @@ languageConfig.compilers = {
 languageConfig.errors = require("./nexss.au3.errors");
 languageConfig.languagePackageManagers = {
   autoit: {
-    //TODO:
+    //TODO: Fill AutoIt package manager
     installation: "PowerShell.exe -File installComposer.ps1",
-    messageAfterInstallation:
-      "Add to the top of your php file(s): require __DIR__ . '/vendor/autoload.php';", //this message will be displayed after this package manager installation, maybe some action needed etc.
-    installed: "composer installed <args>",
-    search: "composer search <args>",
-    install: "composer require <args>",
-    uninstall: "composer remove <args>",
-    help: "composer <args>",
-    version: "composer version",
+    messageAfterInstallation: "", //this message will be displayed after this package manager installation, maybe some action needed etc.
+    installed: "",
+    search: "",
+    install: "",
+    uninstall: "",
+    help: "",
+    version: "",
     init: () => {},
     // if command not found in specification
     // run directly on package manager

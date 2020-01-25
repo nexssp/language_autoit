@@ -10,6 +10,8 @@ While True
     Sleep(25)
 WEnd
 
+ConsoleWrite($NexssStdin)
+
 $parsedJson = json_decode($NexssStdin)
 Json_ObjPut($parsedJson, "test", "test")
 ;~ $start = Json_ObjGet($object,"start") OR Json_Get($json, '["upload"]["links"]["original"]')
@@ -18,5 +20,5 @@ Json_ObjPut($parsedJson, "test", "test")
 ;~ Your code goes here
 ;~ ================================= Nexss
 
-$NexssStdout = Json_Encode($parsedJson)
+$NexssStdout = Json_Encode($parsedJson, $JSON_UNESCAPED_UNICODE)
 ConsoleWrite($NexssStdout)

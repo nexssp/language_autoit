@@ -18,5 +18,5 @@ Json_ObjPut($parsedJson, "autoItOutput", @AutoItVersion)
 ;~ Your code goes here
 ;~ ================================= Nexss
 
-$NexssStdout = Json_Encode($parsedJson)
+$NexssStdout = Json_Encode($parsedJson, $JSON_UNESCAPED_UNICODE)
 ConsoleWrite($NexssStdout)
